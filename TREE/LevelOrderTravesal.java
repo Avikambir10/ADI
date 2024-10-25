@@ -60,7 +60,7 @@ public class LevelOrderTravesal {
         for (int i = 0; i < n; i++) {
             arr.add(sc.nextInt());
         }
-
+        sc.close();
         TreeNode root = buildTree(arr);
         System.out.println("Level order traversal is: ");
         levelOrder(root);

@@ -27,6 +27,7 @@ public class LCA {
         } else {
             System.out.println("LCA not found");
         }
+        sc.close();
     }
 
     // Function to find the LCA of two nodes

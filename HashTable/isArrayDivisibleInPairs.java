@@ -22,22 +22,22 @@ import java.util.HashMap;
 
 public class isArrayDivisibleInPairs {
     public static void main(String[] args) {
-        int[] arr= {8,4,5,7};
+        int[] arr = {8, 4, 5, 7};
         int k = 4;
-        System.out.println(check(arr,k));
+        System.out.println(check(arr, k));
     }
 
     private static int check(int[] arr, int k) {
         int[] remfreq = new int[k];
-        for(int num : arr){
-            int rem = num%k;
+        for (int num : arr) {
+            int rem = num % k;
             remfreq[rem]++;
         }
-        if(remfreq[0] %2 != 0){
+        if (remfreq[0] % 2 != 0) {
             return 0;
         }
-        for(int i =1;i<k ;i++){
-            if(remfreq[i] != remfreq[k-i]){
+        for (int i = 1; i < k; i++) {
+            if (remfreq[i] != remfreq[k - i]) {
                 return 0;
             }
         }
