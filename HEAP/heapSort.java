@@ -47,9 +47,9 @@ public class heapSort {
         if (largest != i) {
             // Swap the elements at index 'i' and 'largest'
             Collections.swap(arr, i, largest);
-//            int temp = arr.get(i);
-//            arr.set(i, arr.get(largest));
-//            arr.set(largest, temp);
+            // int temp = arr.get(i);
+            // arr.set(i, arr.get(largest));
+            // arr.set(largest, temp);
 
             // Recursively heapify the affected subtree
             heapify(arr, n, largest);
