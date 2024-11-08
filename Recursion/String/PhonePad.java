@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.String;
 //leetcode 17
 
 import java.util.ArrayList;

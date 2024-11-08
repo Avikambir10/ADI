@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.String;
 
 // given a charachtet to skip;;; like = a
 public class SkipACharachter {

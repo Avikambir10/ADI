@@ -18,7 +18,7 @@ package HashTable;
 //The array can be divided as
 //(8,4) and (5,7) whose sum is 12, which is divisible by 4.
 
-import java.util.HashMap;
+
 
 public class isArrayDivisibleInPairs {
     public static void main(String[] args) {

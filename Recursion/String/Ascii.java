@@ -1,4 +1,4 @@
-package Recursion;
+package Recursion.String;
 //Ascii value of a Character
 public class Ascii {
     public static void main(String[] args) {
