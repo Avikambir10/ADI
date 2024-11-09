@@ -8,7 +8,7 @@ public class Stock2 {
         // System.out.println(maxProfit_DP(nums));
 
     }
-    static int maxProfit(int [] nums){
+    private static int maxProfit(int [] nums){
         int profit= 0;
         for (int i = 1; i < nums.length; i++) {
             if(nums[i] > nums [i-1]){

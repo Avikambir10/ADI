@@ -9,6 +9,7 @@ public class SubsetSum {
 
     static int solve(int[] arr, int sum) {
         int n = arr.length;
+        
         boolean[][] dp = new boolean[n + 1][sum + 1];
         for (int i = 0; i < n; i++) {
             dp[i][0] = true;
