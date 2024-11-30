@@ -10,6 +10,7 @@ public class number_of_edges {
             int n = in.nextInt();
             System.out.println(no_of_edges(n));
         }
+        in.close();
     }
 
     static int no_of_edges(int n) {
