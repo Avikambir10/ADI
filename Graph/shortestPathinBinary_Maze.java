@@ -22,10 +22,10 @@ public class shortestPathinBinary_Maze {
         destCol = sc.nextInt();
         sc.close();
 
-        System.out.print("Shortest Path is: " + shortestPathDFS(mat, srcRow, srcCol, destRow, destCol, m, n));
+        System.out.print("Shortest Path is: " + shortestPath(mat, srcRow, srcCol, destRow, destCol, m, n));
     }
 
-    /*static int shortestPath(int[][] mat, int srcR, int srcC, int destR, int destC, int m, int n) {
+    static int shortestPath(int[][] mat, int srcR, int srcC, int destR, int destC, int m, int n) {
         if (mat[srcR][srcC] == 0 || mat[destR][destC] == 0) {
             return -1;
         }
@@ -61,10 +61,10 @@ public class shortestPathinBinary_Maze {
         }
 
         return -1;
-    } */
+    } 
     
     
-    static int shortestPathDFS(int[][] mat, int srcR, int srcC, int destR, int destC, int m, int n) {
+    /*static int shortestPathDFS(int[][] mat, int srcR, int srcC, int destR, int destC, int m, int n) {
         if (mat[srcR][srcC] == 0 || mat[destR][destC] == 0) {
             return -1;
         }
@@ -94,5 +94,5 @@ public class shortestPathinBinary_Maze {
 
         vis[row][col] = false; // Backtrack
         return minPath;
-    }
+    }*/
 }
