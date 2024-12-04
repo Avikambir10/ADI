@@ -20,7 +20,7 @@ public class number_of_edges {
         boolean[] vis = new boolean[n + 1];
         Queue<int[]> q = new LinkedList<>();
 
-        q.add(new int[]{1, 0});
+        q.add(new int[]{1, 0});//vertex ,edge 
         vis[1] = true;
 
         while (!q.isEmpty()) {

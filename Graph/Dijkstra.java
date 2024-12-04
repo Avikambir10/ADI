@@ -39,13 +39,13 @@ public class Dijkstra {
 
     static ArrayList<Integer> dijkstra(ArrayList<ArrayList<iPair>> adj, int src) {
         int n = adj.size();
-        ArrayList<Integer> dist = new ArrayList<>();
+        ArrayList<Integer> distance = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            dist.add(Integer.MAX_VALUE);
+            distance.add(Integer.MAX_VALUE);
         }
 
-        dist.set(src, 0);
+        distance.set(src, 0);
 
         PriorityQueue<iPair> pq = new PriorityQueue<>((a, b) -> a.weight - b.weight);
         pq.add(new iPair(src, 0));
@@ -61,13 +61,13 @@ public class Dijkstra {
 
                 int newdist = dis + edgeweight;
 
-                if (newdist < dist.get(adjnode)) {
-                    dist.set(adjnode, newdist);
-                    pq.add(new iPair(adjnode, dist.get(adjnode)));
+                if (newdist < distance.get(adjnode)) {
+                    distance.set(adjnode, newdist);
+                    pq.add(new iPair(adjnode, distance.get(adjnode)));
                 }
             }
         }
-        return dist;
+        return distance;
     }
 
 }

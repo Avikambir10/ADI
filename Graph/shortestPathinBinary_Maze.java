@@ -54,6 +54,7 @@ public class shortestPathinBinary_Maze {
 
                 if (newRow >= 0 && newRow < m && newCol >= 0 && newCol < n &&
                         mat[newRow][newCol] == 1 && !vis[newRow][newCol]) {
+                            
                     q.add(new int[] { newRow, newCol, length + 1 });
                     vis[newRow][newCol] = true;
                 }
