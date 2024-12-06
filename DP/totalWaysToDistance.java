@@ -19,7 +19,7 @@ package DP;
 
 public class totalWaysToDistance {
     public static void main(String[] args) {
-        int d = 6;
+        int d = 3;
         int k = 3;
         System.out.println(ways(d, k));
     }
