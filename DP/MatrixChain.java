@@ -3,15 +3,19 @@ package DP;
 public class MatrixChain {
 
   public static void main(String[] args) {
-    // Input: number of matrices and their dimensions
-    int n = 4; // Number of matrices (3 matrices => 4 dimensions)
-    int[] dimensions = { 10, 20, 30, 40 };
+    // Define the number of matrices (n)
+    int n = 3;
 
-    // Output the minimum multiplication cost
-    System.out.println(matrixChainMultiplication(dimensions, n));
+    // Define the dimensions array (n+1 elements for n matrices)
+    int[] dimensions = {10, 20, 30, 40};
+
+    // Call the matrixChainMultiplication function and print the result
+    int result = Result.matrixChainMultiplication(dimensions, n);
+    System.out.println("Minimum number of multiplications required: " + result);
   }
-
-  // Function to find the minimum cost of matrix chain multiplication
+}
+class Result {
+  // Function to calculate the minimum cost of matrix chain multiplication
   static int matrixChainMultiplication(int p[], int n) {
     // Create a 2D array to store the results of subproblems
     int[][] dp = new int[n + 1][n + 1];
@@ -38,5 +42,4 @@ public class MatrixChain {
     // Return the result for the full chain
     return dp[1][n];
   }
-
 }
