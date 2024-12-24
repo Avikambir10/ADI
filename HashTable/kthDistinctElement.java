@@ -12,7 +12,7 @@ import java.util.*;
 public class kthDistinctElement {
     public static void main(String[] args) {
         int[] arr = {8, 5, 3, 5, 5, 5};
-        int k = 4;
+        int k = 2;
         System.out.println(helper(arr, k));
     }
 

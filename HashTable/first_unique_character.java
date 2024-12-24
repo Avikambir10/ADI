@@ -1,5 +1,6 @@
 package HashTable;
 //Sample Input 1
+
 //
 //codequotientchamp
 //Sample Output 1
@@ -25,13 +26,13 @@ public class first_unique_character {
     }
 
     private static int unique(String str) {
-        HashMap<Character,Integer> map = new HashMap<>();
-        for(char c : str.toCharArray()){
-            map.put(c, map.getOrDefault(c,0) +1);
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (char c : str.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
 
         for (int i = 0; i < str.length(); i++) {
-            if(map.get(str.charAt(i)) ==1){
+            if (map.get(str.charAt(i)) == 1) {
                 return i;
             }
         }

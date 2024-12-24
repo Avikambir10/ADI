@@ -3,74 +3,53 @@ package Greedy;
 import java.io.*;
 import java.util.*;
 
-// Class to represent an item with value and weight
-class Item {
-    int value, weight;
-
-    // Constructor to initialize value and weight of the item
-    Item(int value, int weight) {
-        this.value = value;
-        this.weight = weight;
-    }
-}
-
 public class Fractional_Knapsack {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-    // Main function to handle input and output
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(br.readLine().trim()); // Number of test cases
+        // Input
+        int n = sc.nextInt();
+        int[] val = new int[n];
+        int[] weight = new int[n];
+        for (int i = 0; i < n; i++) val[i] = sc.nextInt();
+        for (int i = 0; i < n; i++) weight[i] = sc.nextInt();
+        int capacity = sc.nextInt();
 
-        while (t-- > 0) {
-            // Read values array
-            String[] valueInput = br.readLine().trim().split(" ");
-            List<Integer> values = new ArrayList<>();
-            for (String s : valueInput) {
-                values.add(Integer.parseInt(s));
-            }
+        // Output
+        System.out.printf("%.2f\n", fractionalKnapsack(val, weight, n, capacity));
+    }
 
-            // Read weights array
-            String[] weightInput = br.readLine().trim().split(" ");
-            List<Integer> weights = new ArrayList<>();
-            for (String s : weightInput) {
-                weights.add(Integer.parseInt(s));
-            }
+    static class Item {
+        int value, weight;
+        double ratio;
 
-            // Read the knapsack capacity
-            int w = Integer.parseInt(br.readLine().trim());
-
-            // Create array of Item objects
-            Item[] items = new Item[values.size()];
-            for (int i = 0; i < values.size(); i++) {
-                items[i] = new Item(values.get(i), weights.get(i));
-            }
-
-            // Call fractionalKnapsack function and print result
-            System.out.println(String.format("%.6f", fractionalKnapsack(w, items, items.length)));
+        Item(int value, int weight) {
+            this.value = value;
+            this.weight = weight;
+            this.ratio = (double) value / weight;
         }
     }
 
-    // Function to calculate maximum value we can get in the knapsack
-    static double fractionalKnapsack(int w, Item[] items, int n) {
-        // Sort items based on value/weight ratio in decreasing order
-        Arrays.sort(items, (a, b) -> Double.compare((double) b.value / b.weight, (double) a.value / a.weight));
-
-        double totalValue = 0.0;  // Variable to store the maximum value
-        double remainingCapacity = w;  // Remaining capacity of the knapsack
-
+    private static double fractionalKnapsack(int[] val, int[] weight, int n, int capacity) {
+        // Create a list of items with value, weight, and value-to-weight ratio
+        Item[] items = new Item[n];
         for (int i = 0; i < n; i++) {
-            if (items[i].weight <= remainingCapacity) {
-                // If item can fit completely in the knapsack, take the whole item
-                totalValue += items[i].value;
-                remainingCapacity -= items[i].weight;
+            items[i] = new Item(val[i], weight[i]);
+        }
+        // Sort items by value-to-weight ratio in descending order
+        Arrays.sort(items, (a, b) -> Double.compare(b.ratio, a.ratio));
+
+        double maxvalue = 0;
+        for (Item item : items) {
+            if (capacity >= item.weight) {
+                maxvalue += item.value;
+                capacity -= item.weight;
             } else {
-                // If the item cannot fit completely, take the fraction that fits
-                totalValue += items[i].value * (remainingCapacity / items[i].weight);
-                break;  // Knapsack is full
+                //take the fraction of the item
+                maxvalue += item.ratio * capacity;
+                break;
             }
         }
-
-        return totalValue;  // Return the maximum value obtained
+        return maxvalue;
     }
 }
-
