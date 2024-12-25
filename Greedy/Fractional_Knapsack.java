@@ -1,6 +1,5 @@
 package Greedy;
 
-import java.io.*;
 import java.util.*;
 
 public class Fractional_Knapsack {
@@ -14,6 +13,7 @@ public class Fractional_Knapsack {
         for (int i = 0; i < n; i++) val[i] = sc.nextInt();
         for (int i = 0; i < n; i++) weight[i] = sc.nextInt();
         int capacity = sc.nextInt();
+        sc.close();
 
         // Output
         System.out.printf("%.2f\n", fractionalKnapsack(val, weight, n, capacity));

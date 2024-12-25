@@ -44,7 +44,7 @@ public class LCA {
         }
 
         // If one side is null, return the other side (whichever is non-null)
-        return (left != null) ? left : right;
+        return (left != null) ? left : right; 
     }
 
     // Function to build a tree from a list of integers
