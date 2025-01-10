@@ -18,6 +18,7 @@ public class JobScheduling {
             profits[i] = sc.nextInt();
         }
 
+        sc.close();
         // Output
         System.out.println(jobScheduling(deadlines, profits));
     }

@@ -14,6 +14,7 @@ public class Interviewscheduling {
         for (int i = 0; i < n; i++) start[i] = sc.nextInt();
         for (int i = 0; i < n; i++) end[i] = sc.nextInt();
 
+        sc.close();
         // Output
         System.out.println(intervalScheduling(start, end));
     }

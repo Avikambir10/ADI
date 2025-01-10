@@ -18,7 +18,7 @@ public class ActivitySelection {
         for (int i = 0; i < n; i++) {
             finish[i] = sc.nextInt();
         }
-
+        sc.close();
         // Output
         activitySelection(start, finish);
     }
