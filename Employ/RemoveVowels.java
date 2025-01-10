@@ -1,4 +1,4 @@
-package AMCAT;
+package Employ;
 
 // Program to remove all vowels fromm a given string using pointers : 
 // Input : ACADEMY OF TECHNOLOGY    

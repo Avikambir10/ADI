@@ -1,4 +1,4 @@
-package AMCAT;
+package Employ;
 // Program to print all distinct elements of given input arrays.Also print the total of the  distinct elements    
 // arr1 = {1,2,3,4,5} arr2 = {2,6,8,10}
 

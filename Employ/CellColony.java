@@ -1,4 +1,4 @@
-package AMCAT;
+package Employ;
 
 // There is a colony of 8 cells arranged in a straight line where each day every cell competes with its adjacent cells(neighbour). Each day, for each cell, if its neighbours are both active or both inactive, the cell becomes inactive the next day,. otherwise itbecomes active the next day.
 
@@ -38,3 +38,6 @@ public class CellColony {
         return cell;
     }
 }
+//https://brainly.in/question/53261253
+//https://brainly.in/question/58381264
+//https://www.thejoboverflow.com/p/p1251/

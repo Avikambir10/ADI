@@ -1,4 +1,4 @@
-package AMCAT;
+package Employ;
 
 // 5. Print all the prime numbers which are below the given number separated by comma
 

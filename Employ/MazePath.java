@@ -1,4 +1,4 @@
-package AMCAT;
+package Employ;
 
 public class MazePath {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package AMCAT;
+package Employ;
 import java.util.Scanner;
 
 public class GCD {
